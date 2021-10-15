@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="plain">Kucing kuning kakak kakeku lompat-lompat.</h5>
+                        <p class="card-text">Untuk mendapat plain text klik tombol di bawah</p>
+                        <a href="#" class="btn btn-primary" id="btn1">Click</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="html" style="color:green;" class="formatted">Kucing <strong>kuning</strong> kakak<em><sup>kakeku</sup></em> lompat-<a href="#">lompat</a>
+                        </h5>
+                        <p class="card-text">Untuk mendapat text dari html klik tombol di bawah</p>
+                        <a href="#" class="btn btn-primary" id="btn2">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Pilih kota asal anda</h5>
+                        <p class="card-text">Silahkan memilih kota asal anda</p>
+                        <form>
+                            <label>Select Country:</label>
+                            <select class="kota">
+                                <option>Sidoarjo</option>
+                                <option>Surabaya</option>
+                                <option>Bangil</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5><a href="https://www.w3schools.com" id="w3s">Klik tombol di kanan untuk mendapat link
+                                W3School</a></h5>
+                        <p class="card-text">Untuk belajar Programming Web lebih lanjut silahkan klik tombol dibawah</p>
+                        <a href="#" class="btn btn-primary" id="btn3">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert("Plain Text: " + $("#plain").text());
+            });
+
+            $("#btn2").click(function () {
+                alert("HTML: " + $("#html").html());
+            });
+            $("select.kota").change(function () {
+                var selectedkota = $(this).children("option:selected").val();
+                alert("Kamu memilih kota - " + selectedkota);
+            });
+            $("#btn3").click(function () {
+                alert("Link W3School: " + $("#w3s").attr("href"));
+            });
+        });
+    </script>
+</body>
+
+</html>
