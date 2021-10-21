@@ -1,0 +1,25 @@
+.container {
+	border-radius: 1px;
+    border: 1px solid black;
+}
+body {
+	margin:7% auto;
+	font-family: sans-serif;
+    position: relative;
+}
+
+.text-center {
+	color: #333;
+	font-size: 35px;
+	margin-bottom: 40px;
+}
+
+.btn{ 
+    width: 200px;
+    padding: 5px;
+}
+
+.btn-success {
+    color: #000;
+    font-weight: bolder;
+}
